@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap");
+
+:root {
+  --color1: #0b132b;
+  --color2: #1c2541;
+  --color3: #3a506b;
+  --color4: #5bc0be;
+  --color5: #6fffe9;
+  --color6: #b7fffa;
+  --Montserrat: "Montserrat", sans-serif;
+  --Poppins: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color1);
+}
+
+.headerNav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  background-color: var(--color2);
+  border-bottom: 1px solid var(--color3);
+}
+
+.headerTitle {
+  font-size: 24px;
+  font-family: var(--Poppins);
+  color: var(--color5);
+}
+
+.headerButtonList,
+.socialMediaList {
+  display: flex;
+  gap: 15px;
+}
+
+.socialButton {
+  place-items: center;
+  fill: var(--color5);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.5s;
+  background-color: transparent; /* Mengubah background-color menjadi transparent */
+}
+
+.socialButton svg {
+  transition: transform 0.5s;
+}
+
+.socialButton:hover svg {
+  transform: rotate(360deg);
+}
+
+.socialButton:active svg {
+  transform: scale(0.8);
+  fill: var(--color6);
+}
+
+.introduction {
+  display: flex;
+  background-color: var(--color2);
+  margin: 20px;
+  padding: 15px;
+  border: 1.5px solid var(--color4);
+  border-radius: 10px;
+}
+
+.introductionText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
+}
+
+.introduction h1 {
+  font-family: var(--Poppins);
+  font-size: 24px;
+  font-weight: lighter;
+  color: var(--color5);
+  text-align: center;
+  margin: 10px;
+}
+
+.introduction p {
+  font-family: var(--Montserrat);
+  font-size: 16px;
+  color: var(--color6);
+  text-align: justify;
+}
+
+.introductionImage {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.introductionImage img {
+  object-fit: cover;
+  height: 200px;
+  padding: 5px;
+  border: 2px solid var(--color5);
+  border-radius: 50%;
+  background-color: var(--color1);
+  transition: all 0.5s ease-out;
+}
+
+.certification,
+.education, .experiences {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color2);
+  margin: 20px;
+  border: 1.5px solid var(--color4);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.mainTitle h1,
+.experiencesDetail h1 {
+  text-align: center;
+  font-family: var(--Poppins);
+  font-size: 24px;
+  color: var(--color5);
+  margin: 10px;
+}
+
+.experiencesDetail h2 {
+  text-align: center;
+  font-family: var(--Poppins);
+  font-size: 20px;
+  font-weight: lighter;
+  color: var(--color5);
+  margin: px;
+}
+
+.certificationTitle p,
+.educationDetail p,
+.experiencesDetail p {
+  text-align: center;
+  font-family: var(--Montserrat);
+  font-size: 16px;
+  color: var(--color6);
+}
+
+.certificationImage {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+}
+
+.certificationImage img, .educationDetail img, .experiencesDetail img {
+  object-fit: cover;
+  height: 150px;
+  width: 150px;
+  border: 2px solid var(--color5);
+  border-radius: 50%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  transition: all 0.5s ease-out;
+}
+
+.certificationImage img:hover, .educationDetail img:hover, .introductionImage img:hover, .experiencesDetail img:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease-out;
+}
+
+.educationBox {
+  display: flex;
+  align-items: center;
+  gap: 200px;
+}
+
+.educationDetail, .experiencesDetail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin: 10px;
+  padding: 10px;
+}
+
+
+.educationDetail h1 {
+  font-family: var(--Poppins);
+  font-size: 22px;
+  font-weight: lighter;
+  color: var(--color5);
+}
+
+/* Button */
+.mainButton {
+  position: relative;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1.5px solid var(--color4);
+  font-size: 15px;
+  font-family: var(--Poppins);
+  background: var(--color1);
+  color: var(--color5);
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.mainButton:hover {
+  background: var(--color4);
+  color: var(--color1);
+  border: 1.5px solid var(--color1);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.mainButton:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+.mainButton::before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: var(--color6);
+  box-shadow: 0 0 50px 30px var(--color6);
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+.mainButton:active {
+  transform: scale(0.9);
+  transition: transform 0.5s ease;
+}
